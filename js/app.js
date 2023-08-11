@@ -297,9 +297,12 @@ const initBurgerMenu = () => {
 
     if (!burger || !headerPanel || !header) return;
 
-    if (window.matchMedia('(max-width: 1200ox)').matches) {
+    const headerAnchors = header.querySelectorAll('[data-anchor]');
+
+    if (window.matchMedia('(max-width: 1200px)').matches) {
         setHeightHeaderPanel();
         setTopHeaderPanel();
+        closeBurgerOnAnchorsClick();
     }
 
     burger.addEventListener("click", (e) => {
@@ -315,6 +318,21 @@ const initBurgerMenu = () => {
 
     function setTopHeaderPanel() {
         headerPanel.style.top = `${header.clientHeight}px`;
+    }
+
+    function closeBurgerOnAnchorsClick() {
+        headerAnchors.forEach(anchor => {
+            anchor.addEventListener('click', () => {
+                closeBurgerMenu();
+            });
+        })
+    }
+
+    function closeBurgerMenu() {
+        header.classList.remove('is-burger-open');
+        burger.classList.remove('is-active');
+        headerPanel.classList.remove("is-active");
+        document.body.classList.remove("lock");
     }
 }
 
