@@ -1,0 +1,121 @@
+@use "sass:math";
+
+//*<Modules>=======================================================================================================
+
+@import "base/fonts.scss";
+@import "base/function";
+@import "base/animation";
+@import "base/variables";
+@import "base/nullstyle";
+@import "base/common";
+
+//*</Modules>=====================================================================================================
+
+//*<Header and footer>=================================================================================================
+
+@import "components/header";
+@import "components/footer";
+
+//*</Header and footer>=================================================================================================
+
+//*<Components>================================================================================================
+
+//?==============<Big>==============
+
+@import "components/big/menu";
+@import "components/big/section-header";
+@import "components/big/event";
+@import "components/big/advertisment";
+@import "components/big/team-advantage";
+@import "components/overlay";
+
+//?==============</Big>=============
+
+//?==============<Small>==============
+
+@import "components/small/input";
+@import "components/small/textarea";
+@import "components/small/btn";
+@import "components/small/burger";
+@import "components/small/label";
+@import "components/small/arrow";
+@import "components/small/selector";
+
+//?==============</Small>=============
+
+//*</Components>=================================================================================================
+
+//*<Main grid>==================================================================================================
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    @media(max-width: 992px){
+        overflow: hidden;
+    }
+}
+
+.container {
+    max-width: $maxWidthContainer;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media (max-width: 1200px) {
+        max-width: 960px;
+    }
+    @media (max-width: 992px) {
+        max-width: 720px;
+    }
+    @media (max-width: 768px) {
+        max-width: 540px;
+    }
+    @media (max-width: 576px) {
+        max-width: none;
+        padding: 0 16px;
+    }
+}
+
+.page {
+    padding-top: 97px;
+    padding-bottom: 95px;
+    flex: 1 1 auto;
+
+    @media (max-width: 1200px) {
+        padding-top: 66px;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 54px;
+    }
+
+    @media (max-width: 992px) {
+        padding-bottom: 64px;
+    }
+
+    & > section {
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+//*</Main grid>=================================================================================================
+
+//TODO<Blocks>=================================================================================================
+
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/services";
+@import "blocks/advantages";
+@import "blocks/cta";
+@import "blocks/team-advantages";
+@import "blocks/events";
+@import "blocks/advertisments";
+
+//TODO</Blocks>=================================================================================================

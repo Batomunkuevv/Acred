@@ -1,0 +1,38 @@
+.arrow {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: 1px solid #e7e7e7;
+    background: rgba(255, 255, 255, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+
+    &:hover{
+        border-color: $color__main;
+    }
+
+    @media(max-width: 768px){
+        width: 40px;
+        height: 40px;
+    }
+
+    &--prev {
+        & img{
+            transform: rotate(180deg);
+        }
+    }
+
+    &--next {
+    }
+
+    &--blue{
+        background: #4E74BF;
+        border-color: transparent;
+
+        &:hover{
+            border-color: #fff;
+        }
+    }
+}

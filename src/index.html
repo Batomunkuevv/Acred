@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/_head.html', { 'title': 'Acred'})
+
+<body>
+    <div class="wrapper">
+        @@include('html/components/_header.html',{})
+        <main class="page">
+            @@include('html/blocks/_hero.html',{})
+            @@include('html/blocks/_about.html',{})
+            @@include('html/blocks/_services.html',{})
+            @@include('html/blocks/_advantages.html',{})
+            @@include('html/blocks/_cta.html',{})
+            @@include('html/blocks/_team.html',{})
+            @@include('html/blocks/_advertisment.html',{})
+            @@include('html/blocks/_events.html',{})
+        </main>
+        <div class="overlay is-hidden">
+            @@include('html/popups/_video.html',{})
+        </div>
+        @@include('html/components/_footer.html',{})
+    </div>
+    <script defer src="js/aos.js"></script>
+    <script defer src="js/custom-select.js"></script>
+    <script defer src="js/lozad.min.js"></script>
+    <script defer src="js/swiper-bundle.min.js"></script>
+    <script defer src="js/app.js"></script>
+</body>
+
+</html>

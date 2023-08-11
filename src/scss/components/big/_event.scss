@@ -1,0 +1,56 @@
+.event {
+    &:hover{
+        & .event__title{
+            color: $color__main;
+        }
+    }
+
+    &__img {
+        border-radius: 4px;
+        overflow: hidden;
+        height: 320px;
+
+        @media (max-width: 1200px) {
+            height: 262px;
+        }
+
+        @media (max-width: 992px) {
+            height: 193px;
+        }
+
+        @media (max-width: 992px) {
+            height: 262px;
+        }
+
+        @media (max-width: 576px) {
+            height: 180px;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title {
+        margin: unset;
+        font-size: 20px;
+        line-height: 120%;
+        text-transform: unset;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    &__content {
+        padding: 31px 23px;
+        border: 1px solid #d9d9d9;
+        border-top: unset;
+
+        @media (max-width: 992px) {
+            padding: 24px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 16px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.btn {
+    padding: 16px 29px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: #3f64ae;
+    color: #fff;
+    font-size: 16px;
+    font-family: $fontfamily--titles;
+    font-weight: 500;
+    line-height: 100%;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out 0s;
+
+    &:hover{
+        background: #fff;
+        color: $color__main;
+        border-color: $color__main;
+    }
+
+    &--light-blue {
+        color: #3f64ae;
+        background: #dfeaff;
+    }
+
+}

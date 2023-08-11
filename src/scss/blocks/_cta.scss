@@ -1,0 +1,136 @@
+.cta {
+    margin-top: -272px;
+
+    &__body {
+        padding: 56px 48px;
+        display: flex;
+        align-items: start;
+        gap: 24px;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.08);
+
+        @media (max-width: 992px) {
+            padding: 32px;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        @media (max-width: 768px) {
+            padding: 24px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 16px;
+        }
+    }
+
+    &__content {
+    }
+
+    &__title {
+        margin-bottom: 22px;
+        color: $color__main;
+        font-family: $fontfamily--titles;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 150%;
+
+        @media (max-width: 576px) {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 30px;
+    }
+
+    &__support {
+        display: grid;
+        grid-template-columns: 56px auto;
+        align-items: center;
+        column-gap: 16px;
+
+        @media (max-width: 576px) {
+            grid-template-columns: 48px auto;
+            gap: 8px;
+        }
+    }
+
+    &__support-icon {
+        padding: 12px;
+        width: 56px;
+        height: 56px;
+        background: $color__main;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        grid-row: 1/3;
+
+        @media (max-width: 576px) {
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    &__support-text {
+        color: $color__font--titles;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    &__support-phone {
+        color: $color__font--titles;
+        font-family: $fontfamily--titles;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 100%;
+    }
+
+    &__form {
+        width: 600px;
+        flex: none;
+
+        @media (max-width: 1200px) {
+            width: 500px;
+        }
+
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+    }
+
+    &__inputs {
+        margin-bottom: 24px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 16px;
+        row-gap: 24px;
+
+        @media (max-width: 576px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__form-item {
+    }
+
+    &__label {
+    }
+
+    &__input {
+        padding: 12px 17px 17px 11px;
+    }
+
+    &__selector {
+    }
+
+    &__textarea {
+        margin-bottom: 24px;
+    }
+
+    &__btn {
+    }
+}
