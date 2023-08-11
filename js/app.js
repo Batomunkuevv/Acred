@@ -365,14 +365,20 @@ const initAnchors = () => {
 
     anchors.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault()
+            e.preventDefault();
 
-            const blockID = anchor.getAttribute('href').substr(1)
+            let href = this.getAttribute('href').substring(1);
 
-            document.getElementById(blockID).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            })
+            const scrollTarget = document.getElementById(href);
+
+            const topOffset = 72;
+            const elementPosition = scrollTarget.getBoundingClientRect().top;
+            const offsetPosition = elementPosition - topOffset;
+
+            window.scrollBy({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
         })
     })
 }

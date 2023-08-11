@@ -2151,7 +2151,7 @@ svg {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: auto;
+    width: 100%;
     overflow: auto;
   }
 
